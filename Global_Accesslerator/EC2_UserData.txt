@@ -1,0 +1,10 @@
+#!/bin/bash
+
+yum udate -y
+yum install httpd php -y
+/bin/systemctl start httpd.service
+
+echo "<?php" > /var/www/html/index.php
+echo "echo \"User IP Address: \".\$_SERVER['REMOTE_ADDR'];" >> /var/www/html/index.php
+echo "?>" >>  /var/www/html/index.php
+chmod 755 /var/www/html/index.php
