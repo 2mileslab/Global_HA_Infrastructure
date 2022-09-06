@@ -1,6 +1,6 @@
 #!/bin/bash
 yum update -y
-yum -y install httpd -y
+yum install httpd -y
 /bin/systemctl start httpd.service
 echo "<html>" > /var/www/html/index.html
 echo "Hello" >> /var/www/html/index.html
