@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum udate -y
+yum update -y
 yum install httpd php -y
 /bin/systemctl start httpd.service
 
